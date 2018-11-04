@@ -1,8 +1,8 @@
 {% load cms_tags %}
 
-<{{ instance.tag_type }} {{ instance.attributes_str }}
+<{{ instance.tag_type }} {{ instance.attributes_str }}
     id="parent-{{ instance.pk }}"
-    data-children="{{ instance.siblings }}"
+    data-children="{{ instance.siblings }}"
     role="tablist"
 >
     {% with parent=instance %}
@@ -10,4 +10,4 @@
             {% with forloop as parentloop %}{% render_plugin plugin %}{% endwith %}
         {% endfor %}
     {% endwith %}
-</{{ instance.tag_type }}>
+</{{ instance.tag_type }}>
